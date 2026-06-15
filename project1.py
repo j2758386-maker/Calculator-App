@@ -5,18 +5,18 @@ st.title("Calculator")
 num1 = st.number_input("First Number")
 num2 = st.number_input("Second Number")
 
-col1, col2, col3, col4= st.columns(4)
+row1, row2, row3, row4= st.rows(4)
 
-with col1:
+with row1:
     if st.button("+"):
         st.success(num1 + num2)
-with col2:
+with row2:
     if st.button("-"):
         st.success(num1 - num2)
-with col3:
+with row3:
     if st.button("*"):
         st.success(num1 * num2)
-with col4:
+with row4:
     if st.button("/"):
         if num2 != 0:
             st.success(num1 / num2)
